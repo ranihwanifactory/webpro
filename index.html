@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>환코딩 | 컴퓨터·웹앱·AI 맞춤 교육</title>
+<meta name="description" content="대구·현풍·구지·창녕·고령·성주·김천 컴퓨터 교육, 홈페이지·쇼핑몰·SEO·AI 웹앱 제작 교육. 20년 경력 환코딩.">
+<script>document.documentElement.classList.add("js")</script>
+<style>
+:root{--bg:#f4f6fb;--card:#fff;--tx:#0f1530;--mu:#5a6385;--ac:#4f46e5;--ac2:#06b6d4;--bd:#e1e5f2;--ok:#10b981;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a0d1a;--card:#131830;--tx:#eef0ff;--mu:#9aa3c7;--ac:#818cf8;--ac2:#22d3ee;--bd:#252b4d}}
+:root[data-theme="dark"]{--bg:#0a0d1a;--card:#131830;--tx:#eef0ff;--mu:#9aa3c7;--ac:#818cf8;--ac2:#22d3ee;--bd:#252b4d}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.65 -apple-system,"Pretendard","Noto Sans KR","Malgun Gothic",sans-serif;-webkit-text-size-adjust:100%}
+.w{max-width:1040px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:#0b1030;color:#fff}
+nav .w{display:flex;align-items:center;justify-content:space-between;height:56px}
+.logo{font-weight:900;font-size:19px;letter-spacing:-.5px}.logo b{color:#67e8f9}
+nav a.cta{background:#fff;color:#0b1030;padding:8px 16px;border-radius:99px;text-decoration:none;font-weight:800;font-size:14px}
+.hero{position:relative;overflow:hidden;background:radial-gradient(circle at 80% 0%,#4338ca 0,transparent 55%),radial-gradient(circle at 0% 100%,#0e7490 0,transparent 50%),#0b1030;color:#fff;padding:48px 0 56px}
+.hero .w{display:grid;grid-template-columns:1.15fr .85fr;gap:34px;align-items:center}
+.badge{display:inline-block;background:rgba(255,255,255,.12);padding:6px 14px;border-radius:99px;font-size:13px}
+h1{font-size:clamp(28px,5vw,46px);line-height:1.25;margin:16px 0 12px;letter-spacing:-1px}
+h1 span{background:linear-gradient(90deg,#a5b4fc,#67e8f9);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{color:#c7cdf0;margin:0 0 22px}
+.btns{display:flex;gap:10px;flex-wrap:wrap}
+.btn{border:0;cursor:pointer;padding:14px 24px;border-radius:12px;font:inherit;font-weight:800;text-decoration:none;display:inline-block;text-align:center}
+.p{background:linear-gradient(90deg,#6366f1,#06b6d4);color:#fff}.s{background:var(--card);color:var(--tx);border:1px solid var(--bd)}
+.hero .s{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.25)}
+.win{background:#0d1117;border-radius:16px;padding:14px 18px 18px;box-shadow:0 20px 50px rgba(0,0,0,.4);font:14px/1.9 ui-monospace,Consolas,monospace;color:#7ee787}
+.dots i{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:6px;background:#ff5f56}.dots i:nth-child(2){background:#ffbd2e}.dots i:nth-child(3){background:#27c93f}
+.win .t{color:#8b949e;margin:8px 0 4px}.win span{display:block;opacity:0;animation:in .5s forwards}
+.win span:nth-of-type(1){animation-delay:.4s}.win span:nth-of-type(2){animation-delay:1s}.win span:nth-of-type(3){animation-delay:1.6s}.win span:nth-of-type(4){animation-delay:2.2s}.win span:nth-of-type(5){animation-delay:2.8s;color:#67e8f9}
+@keyframes in{to{opacity:1}}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:-30px auto 0;position:relative}
+.stat{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:16px;text-align:center;box-shadow:0 8px 24px rgba(15,21,48,.08)}
+.stat b{display:block;font-size:28px;color:var(--ac)}.stat small{color:var(--mu)}
+section{padding:46px 0 10px}
+h2{font-size:clamp(23px,4vw,32px);margin:0 0 6px;letter-spacing:-.5px}.lead{color:var(--mu);margin:0 0 22px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+.sv{background:var(--card);border:2px solid var(--bd);border-radius:16px;padding:18px;cursor:pointer;text-align:left;font:inherit;color:inherit;transition:.2s;position:relative}
+.sv:hover{transform:translateY(-4px);border-color:var(--ac)}.sv.on{border-color:var(--ac);background:color-mix(in srgb,var(--ac) 9%,var(--card))}
+.sv .ic{font-size:28px}.sv h3{margin:6px 0 4px;font-size:17px}.sv p{margin:0;color:var(--mu);font-size:14px}
+.sv .ck{position:absolute;top:12px;right:14px;width:24px;height:24px;border-radius:50%;border:2px solid var(--bd);display:grid;place-items:center;font-size:13px;color:#fff}
+.sv.on .ck{background:var(--ac);border-color:var(--ac)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}.chip{background:var(--card);border:1px solid var(--bd);padding:8px 16px;border-radius:99px;font-weight:600}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;counter-reset:s}
+.st{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px}.st::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--ac);color:#fff;font-weight:800;margin-bottom:8px}
+.st small{color:var(--mu)}
+.tl{border-left:3px solid var(--ac);padding-left:18px;display:grid;gap:14px}.tl b{display:block}.tl span{color:var(--mu);font-size:14px}
+.form{background:var(--card);border:1px solid var(--bd);border-radius:20px;padding:22px;display:grid;gap:14px}
+.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+label{font-weight:700;font-size:14px;display:grid;gap:6px}
+input,select,textarea{font:inherit;font-size:16px;color:var(--tx);background:var(--bg);border:1px solid var(--bd);border-radius:10px;padding:12px;width:100%}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--ac);border-color:transparent}
+.pick{display:flex;flex-wrap:wrap;gap:8px}.pick button{border:1px solid var(--bd);background:var(--bg);color:var(--tx);border-radius:99px;padding:8px 14px;cursor:pointer;font:inherit;font-size:14px}
+.pick button.on{background:var(--ac);color:#fff;border-color:var(--ac)}
+.err{color:#e11d48;font-size:13px;min-height:18px}
+.res{display:none;margin-top:14px;background:color-mix(in srgb,var(--ok) 12%,var(--card));border:1px solid var(--ok);border-radius:14px;padding:16px}
+.res pre{white-space:pre-wrap;font:13px/1.6 inherit;margin:8px 0;background:var(--bg);padding:10px;border-radius:8px}
+details{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:12px 16px;margin-bottom:8px}summary{cursor:pointer;font-weight:700}details p{margin:8px 0 0;color:var(--mu)}
+footer{margin-top:40px;border-top:1px solid var(--bd);padding:28px 0 100px;color:var(--mu);text-align:center;font-size:14px}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:6;display:flex;gap:8px;padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));background:var(--card);border-top:1px solid var(--bd)}
+.bar a{flex:1;text-align:center;padding:13px 0;border-radius:12px;font-weight:800;text-decoration:none;font-size:15px}
+.bar .b1{background:var(--bg);color:var(--tx);border:1px solid var(--bd)}.bar .b2{background:var(--ac);color:#fff}
+#bg{position:absolute;inset:0;width:100%;height:100%;z-index:0}.hero .w{position:relative;z-index:1}
+.hero::after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:44px 44px;animation:gm 14s linear infinite;pointer-events:none;z-index:0}
+@keyframes gm{to{background-position:44px 44px}}
+.hint{font-size:12px;color:#9fb0ff;margin:14px 0 0}
+@media (prefers-reduced-motion:reduce){.hero::after{animation:none}}
+.js .rv{opacity:0;transform:translateY(16px);transition:.6s}.js .rv.in{opacity:1;transform:none}
+@media (max-width:720px){
+.w{padding:0 16px}.hero{padding:30px 0 50px}.hero .w{grid-template-columns:1fr;gap:24px}
+.btns .btn{flex:1 1 100%}.win{font-size:13px}
+.stats{grid-template-columns:1fr 1fr;gap:10px}.stat{padding:12px}.stat b{font-size:24px}
+section{padding:34px 0 6px}.grid{grid-template-columns:1fr;gap:10px}
+.sv{display:grid;grid-template-columns:44px 1fr;column-gap:12px;align-items:center;padding:14px 48px 14px 14px}
+.sv .ic{grid-row:span 2;font-size:30px}.sv h3{margin:0;font-size:16px}
+.steps{grid-template-columns:1fr 1fr}.form{padding:16px}}
+</style>
+</head>
+<body>
+<nav><div class="w"><div class="logo">환<b>코딩</b></div><a class="cta" href="#contact">문의하기</a></div></nav>
+
+<header class="hero"><canvas id="bg" aria-hidden="true"></canvas><div class="w">
+<div>
+<span class="badge">📍 대구 · 현풍 · 구지 · 창녕 · 고령 · 성주 · 김천</span>
+<h1>컴퓨터부터 <span>내 서비스 개발</span>까지<br>직접 만들 수 있게 가르칩니다</h1>
+<p class="sub">윈도우 설치, 홈페이지·쇼핑몰, SEO, AI 웹앱까지. 컴퓨터공학 전공, 프리랜서 20년 노하우를 1:1 맞춤으로 전해드립니다.</p>
+<div class="btns"><a class="btn p" href="#services">배우고 싶은 항목 고르기</a><a class="btn s" href="tel:01075450038">📞 010-7545-0038</a></div>
+<p class="hint">✨ 배경을 터치하거나 마우스를 움직여 보세요</p>
+</div>
+<div class="win"><div class="dots"><i></i><i></i><i></i></div><div class="t">$ 환코딩 --start</div>
+<span>&gt; 윈도우 설치·PC 활용 ✔</span><span>&gt; 홈페이지·쇼핑몰 제작 ✔</span><span>&gt; 검색 노출·브랜딩 ✔</span><span>&gt; AI로 웹앱·프로그램 ✔</span><span>&gt; 내 서비스 오픈 🚀</span></div>
+</div></header>
+
+<div class="w"><div class="stats">
+<div class="stat"><b data-n="20">20</b><small>년 프리랜서 경력</small></div>
+<div class="stat"><b data-n="8">8</b><small>가지 교육 과정</small></div>
+<div class="stat"><b data-n="7">7</b><small>개 활동 지역</small></div>
+<div class="stat"><b>1:1</b><small>맞춤 수업</small></div></div></div>
+
+<section id="services"><div class="w rv">
+<h2>무엇을 배우고 싶으세요?</h2>
+<p class="lead">카드를 눌러 여러 개 선택하면 아래 문의 폼에 자동으로 담깁니다.</p>
+<div class="grid" id="cards"></div></div></section>
+
+<section><div class="w rv"><h2>이런 분께 맞습니다</h2><p class="lead">컴퓨터를 더 잘 쓰고, 내 사업·서비스를 직접 만들고 싶은 분 누구나.</p>
+<div class="chips"><span class="chip">🛠 소상공인·자영업자</span><span class="chip">🏢 1인 사업가</span><span class="chip">🧑‍💼 프리랜서</span><span class="chip">🎓 입문자·시니어</span><span class="chip">💡 창업 준비</span></div></div></section>
+
+<section><div class="w rv"><h2>진행 방식</h2><p class="lead">목표에서 출발하는 실습 중심 수업입니다.</p>
+<div class="steps"><div class="st"><b>상담</b><br><small>목표·수준 파악</small></div><div class="st"><b>견적</b><br><small>이메일로 비용 안내</small></div><div class="st"><b>실습 수업</b><br><small>직접 만들며 배우기</small></div><div class="st"><b>사후 지원</b><br><small>운영·수정 질문 응대</small></div></div></div></section>
+
+<section><div class="w rv"><h2>환코딩 이력</h2><p class="lead">이론과 현장을 모두 겪은 전문가입니다.</p>
+<div class="tl"><div><b>컴퓨터공학과 졸업 (대졸)</b><span>전공 기초부터 탄탄하게</span></div>
+<div><b>IT 보안 소프트웨어 공급 회사 근무</b><span>NMS 시스템 설치 및 운영</span></div>
+<div><b>프리랜서 20년</b><span>꾸준히 쌓아온 노하우와 실력</span></div></div></div></section>
+
+<section id="contact"><div class="w rv"><h2>교육·제작 문의</h2><p class="lead">항목을 고르고 보내시면 이메일로 비용과 견적을 안내해 드립니다. 앱 제작 문의도 환영합니다.</p>
+<form class="form" id="f" novalidate>
+<div class="row"><label>성함<input id="nm" placeholder="홍길동" autocomplete="name"></label><label>연락처<input id="ph" type="tel" placeholder="010-0000-0000" autocomplete="tel"></label></div>
+<div class="row"><label>이메일<input id="em" type="email" placeholder="you@example.com" autocomplete="email"></label>
+<label>지역<select id="rg"><option>대구</option><option>현풍</option><option>구지</option><option>창녕</option><option>고령</option><option>성주</option><option>김천</option><option>기타(원격 가능)</option></select></label></div>
+<label>배우고 싶은 항목<div class="pick" id="pick"></div></label>
+<div class="row"><label>문의 유형<select id="tp"><option>교육 수강</option><option>웹앱·홈페이지 제작 의뢰</option><option>교육 + 제작 모두</option></select></label>
+<label>현재 수준<select id="lv"><option>완전 입문</option><option>기본 사용 가능</option><option>어느 정도 경험 있음</option></select></label></div>
+<label>문의 내용<textarea id="ms" rows="4" placeholder="만들고 싶은 서비스, 원하는 일정 등을 적어 주세요"></textarea></label>
+<div class="err" id="er"></div>
+<button class="btn p" type="submit">✉ 견적 문의 메일 작성</button></form>
+<div class="res" id="res"><b>✅ 문의 내용이 준비되었습니다</b><pre id="pre"></pre>
+<div class="btns"><button class="btn s" id="cp" type="button">📋 내용 복사</button><a class="btn s" id="sms" href="#">💬 문자로 보내기</a><a class="btn s" href="tel:01075450038">📞 전화</a></div></div></div></section>
+
+<section><div class="w rv"><h2>자주 묻는 질문</h2><br>
+<details><summary>컴퓨터를 잘 못해도 되나요?</summary><p>네, 입문 수준부터 시작하며 수준에 맞춰 속도를 조절합니다.</p></details>
+<details><summary>방문 수업이 가능한가요?</summary><p>대구·현풍·구지·창녕·고령·성주·김천 등에서 가능하며, 지역은 상담 시 조율합니다.</p></details>
+<details><summary>코딩 지식이 없어도 앱을 만들 수 있나요?</summary><p>AI를 활용해 아이디어를 앱과 윈도우 프로그램으로 만드는 방법을 알려드립니다.</p></details>
+<details><summary>비용은 어떻게 되나요?</summary><p>항목과 시간에 따라 달라, 문의 폼으로 보내주시면 이메일로 견적을 안내해 드립니다.</p></details></div></section>
+
+<footer><div class="w"><b>환코딩</b> · 대구 · 📞 010-7545-0038 · ✉ hwanace@naver.com<br>컴퓨터공학과 졸업 · 프리랜서 20년</div></footer>
+<div class="bar"><a class="b1" href="tel:01075450038">📞 전화 상담</a><a class="b2" href="#contact">✉ 견적 문의</a></div>
+
+<script>
+var CONTACT_EMAIL="hwanace@naver.com";
+(function(){try{var c=document.getElementById("bg"),x=c.getContext("2d"),P=[],W,H,m={x:-999,y:-999},run=true,ch="01{}</>;=#".split(""),rm=matchMedia("(prefers-reduced-motion:reduce)").matches,h=c.parentNode;
+function size(){var r=c.getBoundingClientRect(),d=Math.min(devicePixelRatio||1,2);W=r.width;H=r.height;c.width=W*d;c.height=H*d;x.setTransform(d,0,0,d,0,0);var n=Math.round(Math.min(75,W*H/9000));P=[];for(var i=0;i<n;i++)P.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.6,vy:(Math.random()-.5)*.6,c:Math.random()<.3?ch[i%ch.length]:null})}
+function mv(e){var r=c.getBoundingClientRect(),t=e.touches?e.touches[0]:e;m.x=t.clientX-r.left;m.y=t.clientY-r.top}
+h.addEventListener("pointermove",mv);h.addEventListener("touchmove",mv,{passive:true});h.addEventListener("pointerleave",function(){m.x=m.y=-999});
+h.addEventListener("pointerdown",function(e){mv(e);for(var k=0;k<6;k++)P.push({x:m.x,y:m.y,vx:(Math.random()-.5)*4,vy:(Math.random()-.5)*4,c:ch[k]});if(P.length>110)P.splice(0,P.length-110)});
+function fr(){if(!run)return;x.clearRect(0,0,W,H);x.font="15px ui-monospace,monospace";
+for(var i=0;i<P.length;i++){var p=P[i],s=Math.hypot(p.vx,p.vy);if(!rm){p.x+=p.vx;p.y+=p.vy}if(s>.7){p.vx*=.97;p.vy*=.97}if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;
+var dx=m.x-p.x,dy=m.y-p.y,d=Math.hypot(dx,dy);if(d<150){p.x+=dx*.012;p.y+=dy*.012;x.strokeStyle="rgba(103,232,249,"+(1-d/150)*.6+")";x.beginPath();x.moveTo(p.x,p.y);x.lineTo(m.x,m.y);x.stroke()}
+if(p.c){x.fillStyle="rgba(103,232,249,.6)";x.fillText(p.c,p.x,p.y)}else{x.fillStyle="rgba(165,180,252,.85)";x.beginPath();x.arc(p.x,p.y,2,0,6.3);x.fill()}
+for(var j=i+1;j<P.length;j++){var q=P[j],l=Math.hypot(p.x-q.x,p.y-q.y);if(l<110){x.strokeStyle="rgba(129,140,248,"+(1-l/110)*.35+")";x.beginPath();x.moveTo(p.x,p.y);x.lineTo(q.x,q.y);x.stroke()}}}
+if(!rm)requestAnimationFrame(fr)}
+size();addEventListener("resize",size);
+new IntersectionObserver(function(e){var v=e[0].isIntersecting;if(v&&!run){run=true;fr()}run=v}).observe(c);
+fr()}catch(err){}})();
+var S=[["🖥","컴퓨터 수리·윈도우 설치","윈도우 설치, 점검, 속도 개선, 보안 설정"],
+["🌐","홈페이지·쇼핑몰 제작","내 사업용 사이트를 직접 만들고 운영"],
+["🔍","검색엔진 등록·SEO","네이버·구글 등록과 노출 전략"],
+["🎨","브랜딩 컨설팅","이름·로고·메시지로 나만의 브랜드 구축"],
+["🤖","AI 프로필·랜딩페이지","AI로 개인 홈페이지와 영업용 랜딩 제작"],
+["⚙️","사업 운영 웹 시스템","고객·일정·매출 관리 시스템 설계와 제작"],
+["📝","견적서·예약·주문서 앱","필요한 기능 페이지를 맞춤 제작"],
+["🪟","AI로 윈도우 프로그램","간단한 PC 프로그램을 AI와 함께 제작"]];
+var sel=new Set(),$=function(i){return document.getElementById(i)};
+function render(){
+ $("cards").innerHTML=S.map(function(s,i){return '<button type="button" class="sv'+(sel.has(i)?' on':'')+'" data-i="'+i+'"><span class="ck">'+(sel.has(i)?'✓':'')+'</span><div class="ic">'+s[0]+'</div><h3>'+s[1]+'</h3><p>'+s[2]+'</p></button>'}).join("");
+ $("pick").innerHTML=S.map(function(s,i){return '<button type="button" class="'+(sel.has(i)?'on':'')+'" data-i="'+i+'">'+s[1]+'</button>'}).join("");
+}
+function tog(e){var b=e.target.closest("[data-i]");if(!b)return;var i=+b.dataset.i;sel.has(i)?sel.delete(i):sel.add(i);render();$("er").textContent=""}
+$("cards").addEventListener("click",tog);$("pick").addEventListener("click",tog);render();
+try{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.05});
+document.querySelectorAll(".rv").forEach(function(n){io.observe(n)})}catch(x){}
+setTimeout(function(){document.querySelectorAll(".rv").forEach(function(n){n.classList.add("in")})},1500);
+function build(){var it=[...sel].sort().map(function(i){return S[i][1]});
+ return "[환코딩 문의]\n성함: "+$("nm").value.trim()+"\n연락처: "+$("ph").value.trim()+"\n이메일: "+$("em").value.trim()+"\n지역: "+$("rg").value+"\n문의 유형: "+$("tp").value+"\n현재 수준: "+$("lv").value+"\n관심 항목: "+(it.join(", ")||"미선택")+"\n문의 내용: "+($("ms").value.trim()||"-")}
+$("f").addEventListener("submit",function(e){e.preventDefault();var er="";
+ if(!$("nm").value.trim())er="성함을 입력해 주세요.";
+ else if(!/^[0-9\-\s+]{9,}$/.test($("ph").value.trim()))er="연락처를 정확히 입력해 주세요.";
+ else if(!/^\S+@\S+\.\S+$/.test($("em").value.trim()))er="이메일을 정확히 입력해 주세요.";
+ else if(!sel.size)er="배우고 싶은 항목을 하나 이상 선택해 주세요.";
+ $("er").textContent=er;if(er)return;
+ var b=build();$("pre").textContent=b;$("res").style.display="block";$("res").scrollIntoView({behavior:"smooth",block:"center"});
+ $("sms").href="sms:01075450038?body="+encodeURIComponent(b);
+ location.href="mailto:"+CONTACT_EMAIL+"?subject="+encodeURIComponent("[환코딩] 교육·제작 견적 문의 - "+$("nm").value.trim())+"&body="+encodeURIComponent(b)});
+$("cp").addEventListener("click",function(){var t=$("pre").textContent,b=this;
+ (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){b.textContent="✔ 복사됨"}).catch(function(){var r=document.createRange();r.selectNode($("pre"));getSelection().removeAllRanges();getSelection().addRange(r);b.textContent="선택됨, 길게 눌러 복사"})});
+</script>
+</body>
+</html>
